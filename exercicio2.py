@@ -8,14 +8,14 @@ def main():
         retornofibo = gera_fibonacci(numero_selecionado)
         
         fibonacci = retornofibo
-        
+        print(fibonacci)
         verifica_existencia_fibonacci(numero_selecionado,fibonacci)
 def gera_fibonacci(numero_analisar):
     
     inicio1 = True
     fibonacci_temp = [0,1]
     #gerando sequencia fibonacci até o numero selecionado"
-    for i in range(1, numero_analisar):
+    for i in range(1, numero_analisar+10):
         #gera o elemento [2] para calcular o resto depois
         if inicio1 == True:
             
@@ -25,7 +25,7 @@ def gera_fibonacci(numero_analisar):
         else:
             
             fibonacci_temp.append(fibonacci_temp[i]+fibonacci_temp[i-1])
-            
+    
     return fibonacci_temp
 
 def verifica_existencia_fibonacci(numero_selecionado, fibonacci):
